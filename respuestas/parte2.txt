@@ -1,31 +1,32 @@
 TALLER 6 - RESPUESTAS PARTE 2
-Integrante A: ___________________________
-Integrante B: ___________________________
+Integrante A: Eric Fabián De León Batista
+Integrante B: (trabajo individual)
 
 ──────────────────────────────────────────
 1. ¿Cómo accedes al valor 88 (Luis en Español) usando índices?
 
-RESPUESTA:
+RESPUESTA: Con calificaciones[1][1]. Luis es la fila 1 y Español es la columna 1.
 
 
 ──────────────────────────────────────────
 2. ¿Cuántos bucles for necesitas para recorrer todos los elementos de un arreglo 2D? ¿Por qué?
 
-RESPUESTA:
+RESPUESTA: Dos bucles anidados. El de afuera recorre las filas y el de adentro recorre las columnas de cada fila. Hace falta uno por cada dimensión para llegar a todas las celdas.
 
 
 ──────────────────────────────────────────
 3. Si agregas un cuarto estudiante, ¿qué línea de código tendrías que cambiar?
 
-RESPUESTA:
+RESPUESTA: La de int filas = 3, que pasa a 4. Además hay que agregar el nombre en el arreglo estudiantes y llenar las notas de la fila nueva (calificaciones[3][0], [3][1] y [3][2]). Los ciclos no se tocan porque usan la variable filas.
 
 
 ──────────────────────────────────────────
 4. ¿Qué significa String.format("%-12d", valor)? ¿Qué cambia si quitas el -?
 
-RESPUESTA:
+RESPUESTA: Imprime el número entero (d) dentro de un espacio de 12 caracteres, pegado a la izquierda. El signo - es el que lo alinea a la izquierda. Si se quita, el número queda alineado a la derecha y los espacios se ponen antes del número.
 
 
 ──────────────────────────────────────────
 MODIFICACIÓN REALIZADA (describe qué cambiaste y el nuevo promedio de columna):
-
+Se cambió filas a 4, se agregó "Pedro" al arreglo de estudiantes y su fila de notas 78, 65 y 92. El promedio de Pedro es 78.33.
+Los promedios por materia se recalcularon solos: Matemática 79.50, Español 73.75 y Ciencias 84.25.

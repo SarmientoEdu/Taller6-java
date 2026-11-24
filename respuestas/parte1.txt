@@ -1,32 +1,33 @@
 TALLER 6 - RESPUESTAS PARTE 1
-Integrante A: ___________________________
-Integrante B: ___________________________
-Fecha: __________________________________
+Integrante A: Eric Fabián De León Batista
+Integrante B: (trabajo individual)
+Fecha: 23/11/2026
 
 ──────────────────────────────────────────
 1. ¿Qué índice tiene el último elemento de un arreglo de tamaño 5?
 
-RESPUESTA:
+RESPUESTA: El índice 4. Como los índices empiezan en 0, el último siempre es el tamaño menos 1 (5 - 1 = 4).
 
 
 ──────────────────────────────────────────
 2. ¿Qué pasa si intentas acceder a notas[5] en este arreglo? ¿Qué error esperas?
 
-RESPUESTA:
+RESPUESTA: El programa se cae en tiempo de ejecución con un ArrayIndexOutOfBoundsException, porque la posición 5 no existe (solo van de la 0 a la 4). Compila bien, pero falla al momento de correr.
 
 
 ──────────────────────────────────────────
 3. ¿Por qué se inicializa maximo = notas[0] en vez de maximo = 0?
 
-RESPUESTA:
+RESPUESTA: Porque así se compara contra un valor que de verdad está en el arreglo. Con el máximo y notas positivas funcionaría igual, pero con el mínimo no: si minimo empieza en 0 nunca cambia, porque ninguna nota es menor que 0, y saldría 0 aunque nadie lo haya sacado. Empezar con el primer elemento sirve para cualquier caso.
 
 
 ──────────────────────────────────────────
 4. ¿Qué significa (double) antes de suma? ¿Qué pasaría si lo quitas?
 
-RESPUESTA:
+RESPUESTA: Es un cast, convierte suma a double antes de dividir para que el resultado tenga decimales. Si se quita, Java hace una división entera (int / int) y se pierden los decimales. Por ejemplo, con las 8 notas de prueba daría 72.00 en vez de 72.25.
 
 
 ──────────────────────────────────────────
 MODIFICACIÓN REALIZADA (describe qué cambiaste y cuál fue el resultado):
-
+Se cambió new int[5] por new int[8]. No hubo que tocar nada más porque los ciclos usan notas.length.
+Con las notas 55, 72, 88, 91, 44, 67, 78, 83 el resultado fue: suma 578, promedio 72.25, máxima 91 y mínima 44, que son los valores correctos.

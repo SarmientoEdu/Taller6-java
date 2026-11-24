@@ -1,41 +1,42 @@
 TALLER 6 - RESPUESTAS PARTE 4
-Integrante A: ___________________________
-Integrante B: ___________________________
+Integrante A: Eric Fabián De León Batista
+Integrante B: (trabajo individual)
 
 ──────────────────────────────────────────
 1. ¿Cuál es la diferencia entre add("valor") y add(1, "valor")?
 
-RESPUESTA:
+RESPUESTA: add("valor") lo agrega al final de la lista. add(1, "valor") lo mete en la posición 1 y los elementos que estaban de ahí en adelante se corren una posición.
 
 
 ──────────────────────────────────────────
 2. ¿Qué ocurre si intentas hacer ciudades.get(10) en una lista de 5 elementos?
 
-RESPUESTA:
+RESPUESTA: Da un IndexOutOfBoundsException en tiempo de ejecución, porque esa posición no existe. Los índices válidos son del 0 al 4.
 
 
 ──────────────────────────────────────────
 3. ¿Por qué usamos ArrayList<Integer> y no ArrayList<int>?
 
-RESPUESTA:
+RESPUESTA: Porque las colecciones solo guardan objetos y int es un tipo primitivo. Integer es la clase envoltorio (wrapper) de int. Java convierte de uno a otro automáticamente (autoboxing), por eso se puede hacer numeros.add(34) sin problema.
 
 
 ──────────────────────────────────────────
 4. ¿Cuál es el orden de atención en una cola FIFO?
    ¿Cuál sería el orden en una pila LIFO con addFirst/removeFirst?
 
-RESPUESTA:
+RESPUESTA: En la cola el primero que llega es el primero que se atiende: Cliente 1, 2, 3, 4. En una pila es al revés, el último que entra sale primero; si se agregan con addFirst y se sacan con removeFirst el orden sería Cliente 4, 3, 2, 1.
 
 
 ──────────────────────────────────────────
 5. ¿Cuándo preferirías usar LinkedList sobre ArrayList y viceversa?
 
-RESPUESTA:
+RESPUESTA: LinkedList cuando se agregan o se quitan elementos seguido, sobre todo al inicio o al final, como en una cola de turnos. ArrayList cuando lo que más se hace es leer o buscar por índice con get(i), porque ahí es más rápido.
 
 
 ──────────────────────────────────────────
 MODIFICACIONES REALIZADAS:
 Sección B (filtro >= 40 + suma):
+El filtro pasó de >= 50 a >= 40 y se agregó una variable que va sumando los que pasan el filtro. Los filtrados son [78, 56, 89, 45, 67] y su suma es 335.
 
 Sección C (clientes 5 y 6 en cola):
-
+Después de atender a Cliente 1 y Cliente 2 llegan Cliente 5 y Cliente 6 con addLast. En ese momento la cola queda [Cliente 3, Cliente 4, Cliente 5, Cliente 6] y se muestra antes de seguir atendiendo. Después se atienden en ese orden hasta que la cola queda vacía.
