@@ -1,33 +1,34 @@
 TALLER 6 - RESPUESTAS PARTE 3
-Integrante A: ___________________________
-Integrante B: ___________________________
+Integrante A: Pitti Jorge
+Integrante B: Diaz Angel
+Fecha: 23/11/2026
 
 ──────────────────────────────────────────
 1. ¿Qué contiene productos[0] antes de ejecutar new Producto(...)?
 
-RESPUESTA:
+RESPUESTA: Contiene null. La instrucción new Producto[5] crea un arreglo de referencias vacías, pero no crea los objetos. Cada posición debe asignarse después con new Producto(...) para apuntar a un objeto real.
 
 
 ──────────────────────────────────────────
 2. ¿Qué diferencia hay entre productos[i].precio y productos[i].valorTotal()?
 
-RESPUESTA:
+RESPUESTA: productos[i].precio es un atributo (double) que guarda el precio unitario del producto. productos[i].valorTotal() es un método que calcula y devuelve precio * stock, es decir, el valor de todo el inventario de ese producto.
 
 
 ──────────────────────────────────────────
 3. Cuando haces masEconomico = productos[i], ¿se copian los datos del objeto
    o solo la referencia? ¿Qué implica eso?
 
-RESPUESTA:
+RESPUESTA: Solo se copia la referencia, no el objeto. Las dos variables apuntan al mismo objeto en memoria. Por eso, si modificas el objeto a través de una variable (por ejemplo, masEconomico.precio = ...), el cambio también se ve en el arreglo productos[i]. Es una copia superficial de la referencia.
 
 
 ──────────────────────────────────────────
 4. Después del descuento, ¿el valorTotalInventario impreso refleja el nuevo
    precio? ¿Por qué?
 
-RESPUESTA:
+RESPUESTA: No. valorTotalInventario se calculó antes de aplicar el descuento y se guardó en una variable double; el descuento posterior no actualiza esa suma. Para que refleje el nuevo precio habría que recalcular el total después del descuento, recorriendo otra vez los productos o restando el descuento aplicado.
 
 
 ──────────────────────────────────────────
 MODIFICACIÓN REALIZADA (producto agregado y producto con mayor stock afectado):
-
+Agregué el producto Audífonos con precio $75.00 y stock 30. El mayor stock es el de Audífonos (30), así que el descuento del 15% se aplicó a ese producto: su precio bajó de $75.00 a $63.75 y su valor total pasó de $2,250.00 a $1,912.50. El programa imprime el nombre del producto afectado. La captura está en imagenes/p3_resultado.png.

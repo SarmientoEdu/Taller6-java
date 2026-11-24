@@ -1,31 +1,32 @@
 TALLER 6 - RESPUESTAS PARTE 2
-Integrante A: ___________________________
-Integrante B: ___________________________
+Integrante A: Pitti Jorge
+Integrante B: Diaz Angel
+Fecha: 23/11/2026
 
 ──────────────────────────────────────────
 1. ¿Cómo accedes al valor 88 (Luis en Español) usando índices?
 
-RESPUESTA:
+RESPUESTA: Con calificaciones[1][1]. La primera dimensión es la fila (Luis está en la fila 1, porque Ana es la fila 0) y la segunda es la columna (Español está en la columna 1, porque Matemática es la columna 0).
 
 
 ──────────────────────────────────────────
 2. ¿Cuántos bucles for necesitas para recorrer todos los elementos de un arreglo 2D? ¿Por qué?
 
-RESPUESTA:
+RESPUESTA: Se necesitan dos bucles for anidados. El externo recorre las filas y el interno recorre las columnas de cada fila. Cada elemento se identifica con dos índices (fila y columna), por eso hace falta un nivel de repetición para cada dimensión.
 
 
 ──────────────────────────────────────────
 3. Si agregas un cuarto estudiante, ¿qué línea de código tendrías que cambiar?
 
-RESPUESTA:
+RESPUESTA: Cambiar int filas = 3; por int filas = 4;, agregar "Pedro" al arreglo estudiantes y asignar sus tres notas en la fila 3: calificaciones[3][0], [3][1] y [3][2]. El arreglo calificaciones se redimensiona automáticamente porque se declara con las variables filas y columnas.
 
 
 ──────────────────────────────────────────
 4. ¿Qué significa String.format("%-12d", valor)? ¿Qué cambia si quitas el -?
 
-RESPUESTA:
+RESPUESTA: Formatea un número entero en un campo de 12 caracteres alineado a la izquierda. Si se quita el signo -, el número se alinea a la derecha, dejando los espacios a la izquierda. El ancho del campo sigue siendo 12.
 
 
 ──────────────────────────────────────────
 MODIFICACIÓN REALIZADA (describe qué cambiaste y el nuevo promedio de columna):
-
+Agregué al estudiante Pedro con las notas 78, 65 y 92, y cambié filas a 4. Los promedios por estudiante quedaron: Ana 82.33, Luis 74.33, Carla 81.67 y Pedro 78.33. Los promedios por materia se recalcularon automáticamente: Matemática 79.50, Español 73.75 y Ciencias 84.25. La captura está en imagenes/p2_resultado.png.

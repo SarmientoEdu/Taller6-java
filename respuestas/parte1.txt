@@ -1,32 +1,32 @@
 TALLER 6 - RESPUESTAS PARTE 1
-Integrante A: ___________________________
-Integrante B: ___________________________
-Fecha: __________________________________
+Integrante A: Pitti Jorge
+Integrante B: Diaz Angel
+Fecha: 23/11/2026
 
 ──────────────────────────────────────────
 1. ¿Qué índice tiene el último elemento de un arreglo de tamaño 5?
 
-RESPUESTA:
+RESPUESTA: Tiene índice 4. Los índices empiezan en 0, así que un arreglo de tamaño 5 usa las posiciones 0, 1, 2, 3 y 4.
 
 
 ──────────────────────────────────────────
 2. ¿Qué pasa si intentas acceder a notas[5] en este arreglo? ¿Qué error esperas?
 
-RESPUESTA:
+RESPUESTA: Se produce un error en tiempo de ejecución: ArrayIndexOutOfBoundsException. El arreglo solo tiene índices válidos de 0 a 4; el compilador no detecta este acceso porque el índice es una expresión que se evalúa al ejecutar.
 
 
 ──────────────────────────────────────────
 3. ¿Por qué se inicializa maximo = notas[0] en vez de maximo = 0?
 
-RESPUESTA:
+RESPUESTA: Porque el arreglo podría contener solo números negativos o todos menores que 0. Si se inicializara en 0, el máximo calculado sería incorrecto. Usar notas[0] garantiza que la comparación parte de un valor que realmente existe en el arreglo. Lo mismo aplica para el mínimo.
 
 
 ──────────────────────────────────────────
 4. ¿Qué significa (double) antes de suma? ¿Qué pasaría si lo quitas?
 
-RESPUESTA:
+RESPUESTA: Es un cast que convierte el valor de suma a double antes de hacer la división. Sin el cast, la división sería entera y el promedio se truncaría: por ejemplo, 578 / 8 daría 72 en lugar de 72.25. El cast obliga a que la división sea decimal.
 
 
 ──────────────────────────────────────────
 MODIFICACIÓN REALIZADA (describe qué cambiaste y cuál fue el resultado):
-
+Cambié la creación del arreglo de new int[5] a new int[8]. Con las notas 55, 72, 88, 91, 44, 67, 78 y 83 se obtuvo: suma 578, promedio 72.25, máxima 91 y mínima 44. La captura está en imagenes/p1_resultado.png.

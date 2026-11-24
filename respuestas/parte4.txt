@@ -1,41 +1,43 @@
 TALLER 6 - RESPUESTAS PARTE 4
-Integrante A: ___________________________
-Integrante B: ___________________________
+Integrante A: Pitti Jorge
+Integrante B: Diaz Angel
+Fecha: 23/11/2026
 
 ──────────────────────────────────────────
 1. ¿Cuál es la diferencia entre add("valor") y add(1, "valor")?
 
-RESPUESTA:
+RESPUESTA: add("valor") agrega el elemento al final de la lista. add(1, "valor") lo inserta en el índice 1 y desplaza una posición hacia la derecha a todos los elementos que estaban desde ese índice en adelante.
 
 
 ──────────────────────────────────────────
 2. ¿Qué ocurre si intentas hacer ciudades.get(10) en una lista de 5 elementos?
 
-RESPUESTA:
+RESPUESTA: Se lanza una IndexOutOfBoundsException en tiempo de ejecución, porque el índice 10 no existe. Los índices válidos de una lista de 5 elementos son 0, 1, 2, 3 y 4. El compilador no lo detecta porque el índice es una expresión que se evalúa al ejecutar.
 
 
 ──────────────────────────────────────────
 3. ¿Por qué usamos ArrayList<Integer> y no ArrayList<int>?
 
-RESPUESTA:
+RESPUESTA: Porque los genéricos de Java solo aceptan tipos de referencia, no tipos primitivos como int. Integer es la clase envolvente de int. El autoboxing convierte automáticamente los int en Integer al agregarlos y los vuelve a int al leerlos, pero el tipo genérico debe ser la clase.
 
 
 ──────────────────────────────────────────
 4. ¿Cuál es el orden de atención en una cola FIFO?
    ¿Cuál sería el orden en una pila LIFO con addFirst/removeFirst?
 
-RESPUESTA:
+RESPUESTA: En una cola FIFO se atiende en el orden de llegada: Cliente 1, Cliente 2, Cliente 3 y Cliente 4. En una pila LIFO con addFirst/removeFirst, el último que llega se atiende primero: si se agregan 1, 2, 3 y 4 con addFirst, la lista queda [4, 3, 2, 1] y removeFirst atiende 4, 3, 2 y 1. También se puede lograr LIFO con addLast/removeLast.
 
 
 ──────────────────────────────────────────
 5. ¿Cuándo preferirías usar LinkedList sobre ArrayList y viceversa?
 
-RESPUESTA:
+RESPUESTA: LinkedList conviene cuando se insertan y eliminan muchos elementos al inicio o en medio de la lista, o cuando se usa como cola o pila, porque cambiar las referencias de los nodos es barato una vez ubicado el punto. ArrayList conviene cuando se accede mucho por índice o se recorre la lista, porque el arreglo interno da acceso O(1) y mejor uso de la memoria caché. En la mayoría de los casos ArrayList es la opción por defecto y LinkedList solo se justifica si las inserciones/eliminaciones en los extremos son la operación dominante.
 
 
 ──────────────────────────────────────────
 MODIFICACIONES REALIZADAS:
 Sección B (filtro >= 40 + suma):
+Cambié el filtro de >= 50 a >= 40. Los elementos filtrados son [78, 56, 89, 45, 67] y su suma es 335.
 
 Sección C (clientes 5 y 6 en cola):
-
+Se atendieron primero los Clientes 1 y 2. Mientras quedaban clientes en cola llegaron el Cliente 5 y el Cliente 6; la cola completa quedó [Cliente 3, Cliente 4, Cliente 5, Cliente 6] y luego se atendieron en ese orden. La captura está en imagenes/p4c_cola.png.
